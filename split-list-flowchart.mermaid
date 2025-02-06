@@ -1,0 +1,26 @@
+flowchart TD
+    A[Start] --> B[Initialize empty lists:<br>head, oddHead, evenHead = null]
+    
+    B --> C[Create original list with<br>elements: 6,10,13,18,9,24,10]
+    
+    C --> D[Set current = head]
+    
+    D --> E{Is current null?}
+    
+    E -->|No| F[Create new node with<br>current's data]
+    
+    F --> G{Is data even?}
+    
+    G -->|Yes| H[Add to even list:<br>If evenHead null,<br>make it head;<br>else add at end]
+    G -->|No| I[Add to odd list:<br>If oddHead null,<br>make it head;<br>else add at end]
+    
+    H --> J[Move to next node:<br>current = current->next]
+    I --> J
+    
+    J --> E
+    
+    E -->|Yes| K[Display all lists:<br>Original, Odd, Even]
+    
+    K --> L[Free memory:<br>Delete all three lists]
+    
+    L --> M[End]

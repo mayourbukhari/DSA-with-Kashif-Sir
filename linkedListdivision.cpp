@@ -83,7 +83,7 @@ public:
     void displayAll() {
         display("Original List", head);
         display("Odd Elements", oddHead);
-        display("Even Elements", evenHead);
+        display("Remaining Even Elements", evenHead);
     }
     
     ~LinkedList() {
